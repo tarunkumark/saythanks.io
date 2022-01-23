@@ -238,7 +238,6 @@ def submit_note(inbox):
         body = Markup(body)
         note = storage.Note.from_inbox(inbox=None, body=body, byline=byline)
         if storage.Inbox.is_email_enabled(inbox_db.slug):
-        # note.notify(email_address)
             if session:
                 email_address = session['profile']['email']
             else:
